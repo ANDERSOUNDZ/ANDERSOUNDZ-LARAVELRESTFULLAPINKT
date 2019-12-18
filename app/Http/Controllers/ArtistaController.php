@@ -92,9 +92,10 @@ class ArtistaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id, Request $request)
+    public function destroy(Request $request)
     {
         $artista = Artista::destroy($request->id);
+        
         return $artista;
     }
 }

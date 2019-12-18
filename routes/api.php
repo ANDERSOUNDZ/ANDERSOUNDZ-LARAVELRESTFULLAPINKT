@@ -16,3 +16,15 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+
+Route::get('/artista', 'ArtistaController@index');
+
+Route::put('/artista/actualizar', 'ArtistaController@update');
+
+Route::post('/artista/guardar', 'ArtistaController@store');
+
+Route::delete('/artista/borrar/{id}', 'ArtistaController@destroy');
+
+Route::get('/artista/buscar', 'ArtistaController@show');
